@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../images/login_bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.loginAn_box {
+  width: 400px;
+  height: 310px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.title_box {
+  height: 60px;
+  background:url(../images/login_title.png) no-repeat  center;
+}
+/* 登录 */
+.login_box{
+
+}
+/* 注册 */
+.reg_box{
+  display: none;
+}
+.layui-form-item{
+  padding: 0 20px;
+}
