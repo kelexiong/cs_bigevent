@@ -5,10 +5,95 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- layui -->
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+  <!-- 小图标 -->
+  <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+  <!-- 主页 -->
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>管理主页</title>
 </head>
 
 <body>
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <div class="layui-logo layui-hide-xs layui-bg-black">
+        <img src="./assets/images/2.png" alt="">
+      </div>
+      <!-- 头部区域（可配合layui 已有的水平导航） -->
+
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+          <a href="javascript:;" class="holleuser">
+            <img src="./assets/images/sample.jpg" class="layui-nav-img">
+            <span class="defaAut">A</span>
+            <span class="usernametext">个人中心</span>
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a href="">更改资料</a></dd>
+            <dd><a href="">安全中心</a></dd>
+            <dd><a href="">重置密码</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+          <a href="javascript:;" id="btnExitLogin">
+            <span class="iconfont icon-tuichu"></span>退出
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <div class="holleuser">
+          <span class="defaAut">A</span>
+          <img src="./assets/images/sample.jpg" class="layui-nav-img">
+          <span id="usernametext">欢迎 雄哥</span>
+        </div>
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+          <li class="layui-nav-item layui-this"><a href="./home/dashboard.html" target="fm"> <span
+                class="iconfont icon-home"></span>首页</a>
+          </li>
+          <li class="layui-nav-item ">
+            <a class="" href="javascript:;"> <span class="iconfont icon-16"></span>文章管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-template"></i> 文章类别</a></a></dd>
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-template"></i> 文章列表</a></dd>
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-template"></i> 发布文章</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;"> <span class="iconfont icon-user"></span>个人中心</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-set"></i> 基本资料</a></dd>
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-set"></i> 更改头像</a></dd>
+              <dd><a href="javascript:;"><i class="layui-icon layui-icon-set"></i> 重置密码</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item"><a href="javascript:;"> <span class="iconfont icon-home"></span>云商城</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layui-body">
+      <!-- 内容主体区域 -->
+      <iframe name="fm" src="./home/dashboard.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      www.xxxxx.com 小胖同学
+    </div>
+  </div>
+  <!-- 导入layui -->
+  <script src="./assets/lib/layui/layui.all.js"></script>
+  <!-- 导入jq -->
+  <script src="./assets/lib/jquery.js"></script>
+  <!-- 导入API -->
+  <script src="./assets/API/ajaxp.js"></script>
+  <!-- 导入index -->
+  <script src="./assets/js/index.js"></script>
 
 </body>
 
