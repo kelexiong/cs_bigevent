@@ -11,6 +11,7 @@ body {
 .loginAn_box {
   width: 400px;
   height: 310px;
+  padding: 0 30px;
   background-color: #fff;
   position: absolute;
   top: 50%;
@@ -30,5 +31,14 @@ body {
   display: none;
 }
 .layui-form-item{
-  padding: 0 20px;
+  position: relative;
+
+}
+.layui-icon{
+ position: absolute;
+ top: 10px;
+ left: 10px;
+}
+.layui-input{
+  padding-left: 30px;
 }
