@@ -35,18 +35,13 @@ function getUserinfo() {
 
     },
     // 执行回调
-    complete: function (res) {
-      if (res.responseJSON.status === 1) {
-        localStorage.removeItem('token')
-        location.href = '/login.html'
-      }
-    }
+
   })
 }
 function readuserinfo(data) {
 
   // 渲染用户名
-  let username = data.username || data.username
+  let username = data.nickname || data.username
   $('#usernametext').html(`欢迎 ${username}`)
 
   // 渲染用户头像
@@ -54,7 +49,7 @@ function readuserinfo(data) {
     $('.layui-nav-img').attr('src', data.user_pic).show()
     $('.defaAut').hide()
   } else {
-    let pic = data.username.slice(0, 1).toUpperCase()
+    let pic = username.slice(0, 1).toUpperCase()
     $('.defaAut').html(pic).show()
     $('.layui-nav-img').hide()
   }
